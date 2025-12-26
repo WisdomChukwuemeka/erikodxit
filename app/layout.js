@@ -26,9 +26,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-            <main className="flex-grow container mx-auto ">
-            {children}
-          </main>
+            <main className="grow w-full bg-zinc-50">
+  <div className="max-w-7xl mx-auto">
+    {children}
+  </div>
+</main>
         <Footer />
       </body>
     </html>
