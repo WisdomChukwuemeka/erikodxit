@@ -97,10 +97,10 @@ const navLinks = [
 
           <ul className="flex flex-col gap-4 text-gray-600 mb-4">
             <li >
-              <a href="/">Home</a>
+              <a href="/" className="hover:text-emerald-500">Home</a>
             </li>
             <li>
-              <a href="/#courses" onClick={closeMenu}>Courses</a>
+              <a href="/#courses" onClick={closeMenu} className="hover:text-emerald-500">Courses</a>
             </li>
             <li>
               <a href="/#about" onClick={closeMenu} className="hover:text-emerald-500">
@@ -108,7 +108,7 @@ const navLinks = [
               </a>
             </li>
             <li>
-              <a href="/#contact" onClick={closeMenu}>Contact Us</a>
+              <a href="/#contact" onClick={closeMenu} className="hover:text-emerald-500">Contact Us</a>
             </li>
           </ul>
             <div className="flex flex-col gap-3 w-full px-8">

@@ -111,7 +111,7 @@ export default function HomePage () {
       desc: "Earn industry-recognized certificates upon course completion.",
     },
     {
-      icon: "bi-person-workspace",
+      icon: "bi-lightbulb",
       title: "Beginner Friendly",
       desc: "Start from zero with courses designed for all skill levels.",
     },
@@ -164,22 +164,21 @@ export default function HomePage () {
     desc: "Design and manage data pipelines, databases, and ETL workflows to prepare reliable data for analytics and AI systems.",
     img: "/courses/three.png",
   },
-    {
-    title: "DA with Python & SQL",
-    desc: "Learn data analysis using Python, pandas, and SQL to explore data, uncover insights, and support better business decisions.",
-    img: "/courses/one.png",
+  {
+    title: "Visualization & Dashboarding",
+    desc: "Create compelling visual reports and interactive dashboards using modern tools to communicate insights clearly and drive decisions.",
+    img: "/courses/four.png",
   },
   {
-    title: "Machine Learning",
-    desc: "Build predictive models using supervised and unsupervised learning techniques to solve practical problems with real data.",
-    img: "/courses/two.png",
+    title: "Artificial Intelligence",
+    desc: "Explore AI foundations and learn to build intelligent applications using Python, automation techniques, and real-world datasets.",
+    img: "/courses/five.png",
   },
   {
-    title: "Data Engineering",
-    desc: "Design and manage data pipelines, databases, and ETL workflows to prepare reliable data for analytics and AI systems.",
-    img: "/courses/three.png",
+    title: "Excel & Power BI Mastery",
+    desc: "Transform raw data into insights through advanced Excel techniques and Power BI dashboards that reveal trends for business impact.",
+    img: "/courses/six.png",
   },
-
 ].map((course, i) => (
             <div key={i} className="bg-white rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-105">
               <img src={course.img} alt={course.title} className="h-40 w-full object-cover" />
