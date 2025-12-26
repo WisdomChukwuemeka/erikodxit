@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
-export const Header = () => {
+export default function Header () {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -37,12 +37,18 @@ useEffect(() => {
   };
 }, [isOpen]);
 
+const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/#courses", label: "Courses" },
+    { href: "/#about", label: "About" },
+    { href: "/#contact", label: "Contact Us" },
+  ];
 
   return (
     <>
-      <div className="relative bg-white shadow-sm">
+      <div className="relative bg-white shadow-sm z-50">
         <header>
-        <nav className="flex items-center justify-between px-8 py-4 shadow-sm z-40">
+        <nav className="flex items-center justify-between px-8 py-4 shadow-sm">
           <Link href="/">
                 <h1 className="text-xl font-bold text-emerald-600">Erikdox<span className="text-gray-700">IT</span></h1>
           </Link>
@@ -55,7 +61,7 @@ useEffect(() => {
   </Link>
 </li>
 
-  <li className="li-hover"><Link href={"/#courses"}>Courses</Link></li>
+  <li className="li-hover"><Link href="/#courses">Courses</Link></li>
   <li className="li-hover"><Link href="/#about">About</Link></li>
   <li className="li-hover"><Link href="/#contact">Contact Us</Link></li>
 </ul>
@@ -64,10 +70,8 @@ useEffect(() => {
 
             <div className="hidden md:flex gap-3">
               <button className="px-2 md:px-4 py-1 md:py-2 border border-green-300 rounded text-emerald-500">Log In</button>
-              <Link href="/register">
-              <button className="cursor-pointer px-2 md:px-4 py-1 md:py-2 bg-emerald-500 text-white rounded">
+              <Link className="cursor-pointer px-2 md:px-4 py-1 md:py-2 bg-emerald-500 text-white rounded hover:bg-emerald-800 duration-300" href="/register">
                 Sign up
-              </button> 
               </Link>
             </div>
             
@@ -93,7 +97,7 @@ useEffect(() => {
 
           <ul className="flex flex-col gap-4 text-gray-600 mb-4">
             <li >
-              <a href="/" onClick={closeMenu}>Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/#courses" onClick={closeMenu}>Courses</a>

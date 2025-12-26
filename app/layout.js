@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "./components/header";
+import  Header  from "./components/header";
 import Footer from "./components/footer";
 
 
@@ -26,9 +26,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-            <main className="grow container mx-auto ">
+            <main className="flex-grow container mx-auto ">
             {children}
           </main>
+        <Footer />
       </body>
     </html>
   );
